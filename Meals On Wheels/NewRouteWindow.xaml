@@ -1,0 +1,15 @@
+﻿<Window x:Class="Meals_On_Wheels.NewRouteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meals_On_Wheels"
+        mc:Ignorable="d"
+        Title="NewRouteWindow" Height="300" Width="500">
+    <Grid>
+        <TextBox x:Name="RouteNameTextBox" HorizontalAlignment="Left" Height="40" Margin="250,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Right" Margin="0,0,250,0" TextWrapping="Wrap" TextAlignment="Right" Text="Route Name:" VerticalAlignment="Top" Width="200" Height="40" FontSize="20"/>
+        <Button x:Name="CreateRoute" Content="Create Route" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Width="200" FontSize="20" Height="40" Click="CreateRoute_Click"/>
+
+    </Grid>
+</Window>

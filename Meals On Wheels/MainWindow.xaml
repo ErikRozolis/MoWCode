@@ -1,0 +1,26 @@
+﻿<Window x:Class="Meals_On_Wheels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meals_On_Wheels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000">
+    <Grid>
+        <Grid x:Name="DisplayGrid" Margin="0" Background="#FFF3F3F3">
+            <ComboBox x:Name="RouteSelectionBox" Margin="30,30,0,0" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" VerticalContentAlignment="Center" Height="40" SelectionChanged="RouteSelectionBox_SelectionChanged"/>
+            <ScrollViewer Margin="30,100" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <Grid x:Name="ClientList" Background="#FFBDE7FF" ShowGridLines="True" Width="900" HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </ScrollViewer>
+            <Button x:Name="NewRouteButton" Content="Create New Route" VerticalAlignment="Top" Width="200" Margin="0,30,30,0" Height="40" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="20" Click="NewRouteButton_Click"/>
+            <Button x:Name="DeleteRouteButton" Content="X" VerticalAlignment="Top" Width="40" Margin="230,30,0,0" Height="40" HorizontalContentAlignment="Center" FontSize="24" Click="DeleteRouteButton_Click" HorizontalAlignment="Left" Foreground="Red" FontWeight="ExtraBold"/>
+            <Button x:Name="GoogleMapsButton" HorizontalAlignment="Center" Margin="0,0,0,30" VerticalAlignment="Bottom" Width="200" Height="40" VerticalContentAlignment="Center" FontSize="20" Click="GoogleMapsButton_Click" Content="Generate Excel"/>
+            <TextBlock x:Name="LoadingText" HorizontalAlignment="Center" Margin="0,30,0,0" TextWrapping="Wrap" Text="Loading..." VerticalAlignment="Top" FontSize="20" Foreground="#FFFF0707" FontWeight="Bold"/>
+        </Grid>
+
+    </Grid>
+</Window>
