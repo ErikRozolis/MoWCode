@@ -285,7 +285,7 @@ namespace Meals_On_Wheels
             editClient.Address = editClientWindow.ClientAddressTextBox.Text;
             editClient.SpecialInstructions = editClientWindow.SpecialInstructionsTextBox.Text;
             editClient.HotMeals = Convert.ToInt32(editClientWindow.HotMealsTextBox.Text);
-            editClient.ColdMeals = Convert.ToInt32(editClient.ColdMeals);
+            editClient.ColdMeals = Convert.ToInt32(editClientWindow.ColdMealsTextBox.Text);
             editClient.PhoneNumber = editClientWindow.PhoneNumberTextBox.Text;
 
             ClientList.ColumnDefinitions.Clear();
