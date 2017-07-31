@@ -54,6 +54,10 @@ namespace Meals_On_Wheels
             string jsonResponse = new StreamReader(response.GetResponseStream()).ReadToEnd();
 
             Rootobject googleResponse = JsonConvert.DeserializeObject<Rootobject>(jsonResponse);
+            if(googleResponse.status != "OK")
+            {
+                throw new FormatException("Bad results from Google");
+            }
             GoogleMapsJSON.Route primaryRoute = googleResponse.routes[0];
 
             //re-order clients in this route for optimal driving
